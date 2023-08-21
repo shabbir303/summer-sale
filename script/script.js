@@ -26,7 +26,8 @@ function clickItem(target){
   else{
     discountButton.setAttribute('disabled', "true");
   }
-
+  
+  
 
 }
  
@@ -34,8 +35,8 @@ function applyDiscount(){
   const couponCodeInput = document.getElementById('coupon-code');
   const couponCode = couponCodeInput.value;
   if(couponCode === 'SELL200'){
-    document.getElementById('discount-price').style.display='block';
-    document.getElementById('offer-total').style.display='block';
+    document.getElementById('discount-price').style.display='inline-block';
+    document.getElementById('offer-total').style.display='inline-block';
 
     discountAmount = totalAmount * 20/100;
   document.getElementById('discount-price').innerText = discountAmount;
@@ -57,23 +58,29 @@ function applyDiscount(){
   }
 }
 
+function clickToClear(){
+   totalAmount = 0;
+   discountAmount =0;
+   Total = 0;
 
-// const discountButton =document.getElementById('discount-active');
-// function updateButton(){
+  const selectedItemContainer =document.getElementById('selected-items');
+  selectedItemContainer.innerHTML = '';
   
-//   if(totalAmount >= 200){
-//     discountButton.removeAttribute("disabled");
-//   }
-//   else{
-//     discountButton.setAttribute('disabled', "true");
-//   }
-// }
-// updateButton();
+  document.getElementById("total-price").innerText = '00';
+  document.getElementById('discount-price').style.display='none';
+    document.getElementById('offer-total').style.display='none';
 
-    // console.log(typeof totalAmount);
-  
-  // discountAmount = totalAmount * 20/100;
-  // document.getElementById('discount-price').innerText = discountAmount;
+    
 
-  // Total = totalAmount - discountAmount;
-  // document.getElementById('offer-total').innerText = Total;
+    const discountButton =document.getElementById('discount-active');
+    discountButton.setAttribute('disabled', "true");
+
+    const purchaseButton = document.getElementById('purchase-btn');
+    purchaseButton.setAttribute('disabled', 'true');
+
+    const couponCodeInput = document.getElementById('coupon-code');
+    couponCodeInput.value ='';
+}
+
+
+
