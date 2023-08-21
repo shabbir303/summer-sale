@@ -6,10 +6,12 @@ function clickItem(target){
    // console.log(target.childNodes[3].childNodes[3].innerText);
   const selectedItemContainer =document.getElementById('selected-items');
   const itemName = target.childNodes[3].childNodes[3].innerText;
-  const li = document.createElement('li');
-  li.innerText = itemName;
+  const count = selectedItemContainer.childElementCount;
+
+  const p = document.createElement('p');
+  p.innerHTML = `${count +1}.   ${itemName}`;
 //   console.log(li);
-  selectedItemContainer.appendChild(li);
+  selectedItemContainer.appendChild(p);
 
 //   console.log(target.childNodes[3].childNodes[5].innerText.split(' ')[0])
   const price = target.childNodes[3].childNodes[5].innerText.split(' ')[0];
@@ -84,10 +86,12 @@ function clickToClear(){
 
 function couponClickButton(){
   const couponCodeInput = document.getElementById('coupon-code');
-  const couponCode = couponCodeInput.value;
-  const discountButton =  document.getElementById('codeButton');
-  const discountButtonText = discountButton.innerText;
-  discountButtonText = couponCode;
+  // const couponCode = couponCodeInput.value;
+  // const discountButton =  document.getElementById('codeButton');
+  // const discountButtonText = discountButton.innerText;
+  
+  couponCodeInput.value = "SELL200";
+  couponCodeInput.value.style.display = 'block';
 }
 
 

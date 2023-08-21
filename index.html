@@ -25,10 +25,10 @@
         <p class="text-[58px] font-[700] leading-[75px]">Purchase TK 200 or <br>above & get <span class="text-[#E527B2]">20% off</span></p>
         <div class="flex justify-center items-center gap-[16px] mt-[50px]">
           <h3 class="text-[24px] font[500]">Use Promo Code</h3>
-          <button class="btn w-[30%] h-[20px] bg-[#E527B2] text-white">SELL200</button>
+          <button onclick="couponClickButton()" id ='codeButton' class="btn w-[30%] h-[20px] bg-[#E527B2] text-white">SELL200</button>
         </div>
       </div>
-      <img class="w-[600px] h-[600px]" src="images/Summer 1.png" alt="">
+      <img class="w-[400px]  h-[400px]" src="images/Summer 1.png" alt="">
     </div>
   </header>
   <main class="w-[75%] mx-auto my-[100px] flex flex-col md:flex-row justify-between">
@@ -189,7 +189,7 @@
         <h3 class="text-[18px] font-[500] mb-[12px]  pt-[15px] text-center">Have coupon?</h3>
 
         <div class="relative bg-[white] px-[25px] pb-[25px] text-left">
-          <input type="text" name="" id="coupon-code" class="border-solid border-[1px] border-[#abaaaa] p-[10px] rounded-l-lg w-7/12">
+          <input type="text" name="" id="coupon-code" class="border-solid  border-[1px] border-[#abaaaa] p-[10px] rounded-l-lg w-7/12">
           <button onclick="applyDiscount()" id="discount-active" disabled
               class="btn w-[30%] h-[65%] bg-[#E527B2] absolute text-[15px] text-[white] font-[600] rounded-r-lg ml-[-2px] mt-[-1px]">Apply</button>
           <!-- <button id="enableButton" onclick="updateButton()"></button> -->
