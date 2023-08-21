@@ -82,5 +82,13 @@ function clickToClear(){
     couponCodeInput.value ='';
 }
 
+function couponClickButton(){
+  const couponCodeInput = document.getElementById('coupon-code');
+  const couponCode = couponCodeInput.value;
+  const discountButton =  document.getElementById('codeButton');
+  const discountButtonText = discountButton.innerText;
+  discountButtonText = couponCode;
+}
+
 
 
